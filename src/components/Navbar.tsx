@@ -25,16 +25,20 @@ const Navbar = () => {
     >
       <div className="container mx-auto px-4">
         <div className="flex h-20 items-center justify-between">
-          <a href="/" className="text-2xl font-bold font-serif text-cafe-dark">
-            Café Sonnenschein
+          <a href="/" className="text-2xl font-bold font-serif" style={{ color: "#bab3a1" }}>
+            <img 
+              src="/lovable-uploads/7109b222-aba2-4e93-ae16-f26084c7ba74.png" 
+              alt="DUUO" 
+              className="h-12 w-auto"
+            />
           </a>
 
           {/* Desktop Navigation */}
           <nav className="hidden space-x-8 md:flex">
-            <a href="#menu" className="nav-link">Speisekarte</a>
-            <a href="#galerie" className="nav-link">Galerie</a>
-            <a href="#standort" className="nav-link">Standort</a>
-            <a href="#kontakt" className="nav-link">Kontakt</a>
+            <a href="#menu" className="nav-link" style={{ color: "#bab3a1" }}>Speisekarte</a>
+            <a href="#galerie" className="nav-link" style={{ color: "#bab3a1" }}>Galerie</a>
+            <a href="#standort" className="nav-link" style={{ color: "#bab3a1" }}>Standort</a>
+            <a href="#kontakt" className="nav-link" style={{ color: "#bab3a1" }}>Kontakt</a>
           </nav>
 
           {/* Mobile Menu Button */}
@@ -44,9 +48,9 @@ const Navbar = () => {
             aria-label="Menü öffnen"
           >
             {isMobileMenuOpen ? (
-              <X className="h-6 w-6 text-cafe-dark" />
+              <X className="h-6 w-6" style={{ color: "#bab3a1" }} />
             ) : (
-              <Menu className="h-6 w-6 text-cafe-dark" />
+              <Menu className="h-6 w-6" style={{ color: "#bab3a1" }} />
             )}
           </button>
         </div>
@@ -58,28 +62,32 @@ const Navbar = () => {
           <nav className="flex flex-col space-y-4 p-6">
             <a 
               href="#menu" 
-              className="text-lg font-medium text-cafe-dark" 
+              className="text-lg font-medium" 
+              style={{ color: "#bab3a1" }}
               onClick={() => setIsMobileMenuOpen(false)}
             >
               Speisekarte
             </a>
             <a 
               href="#galerie" 
-              className="text-lg font-medium text-cafe-dark" 
+              className="text-lg font-medium" 
+              style={{ color: "#bab3a1" }}
               onClick={() => setIsMobileMenuOpen(false)}
             >
               Galerie
             </a>
             <a 
               href="#standort" 
-              className="text-lg font-medium text-cafe-dark" 
+              className="text-lg font-medium" 
+              style={{ color: "#bab3a1" }}
               onClick={() => setIsMobileMenuOpen(false)}
             >
               Standort
             </a>
             <a 
               href="#kontakt" 
-              className="text-lg font-medium text-cafe-dark" 
+              className="text-lg font-medium" 
+              style={{ color: "#bab3a1" }}
               onClick={() => setIsMobileMenuOpen(false)}
             >
               Kontakt

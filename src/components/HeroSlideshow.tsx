@@ -60,12 +60,12 @@ const HeroSlideshow = () => {
       <div className="slideshow-overlay">
         <div className="rounded-full bg-cafe-main/90 p-6 mb-4 shadow-lg">
           <img
-            src="https://images.unsplash.com/photo-1601933513793-c3f25c905ddf?q=80&w=2670&auto=format&fit=crop" 
-            alt="Café Sonnenschein Logo"
-            className="h-24 w-24 rounded-full object-cover"
+            src="/lovable-uploads/3220a3f1-7466-4f93-8817-188bb6fe0f9d.png" 
+            alt="DUUO Logo"
+            className="h-24 w-auto"
           />
         </div>
-        <h1 className="text-4xl md:text-6xl font-bold mb-4 text-center">Café Sonnenschein</h1>
+        <h1 className="text-4xl md:text-6xl font-bold mb-4 text-center">DUUO</h1>
         <p className="text-xl md:text-2xl max-w-2xl text-center">
           Gemütliche Atmosphäre, ausgezeichneter Kaffee und hausgemachte Köstlichkeiten
         </p>

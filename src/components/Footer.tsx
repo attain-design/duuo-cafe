@@ -8,25 +8,22 @@ const Footer = () => {
       <div className="container mx-auto px-4 py-12">
         <div className="mb-8 flex flex-col items-center justify-center">
           <Coffee className="mb-4 h-8 w-8 text-cafe-peach" />
-          <h3 className="mb-2 text-2xl font-bold">Café Sonnenschein</h3>
+          <h3 className="mb-2 text-2xl font-bold">DUUO</h3>
           <p className="text-white/80">Ihr gemütliches Café in München Westend</p>
         </div>
 
         <div className="mb-8 flex flex-wrap justify-center gap-x-8 gap-y-4">
           <div className="text-center">
-            <h4 className="mb-3 text-lg font-semibold text-cafe-peach">Adresse</h4>
             <p className="text-white/80">Westendstraße 123</p>
             <p className="text-white/80">80339 München</p>
           </div>
 
           <div className="text-center">
-            <h4 className="mb-3 text-lg font-semibold text-cafe-peach">Kontakt</h4>
             <p className="text-white/80">089 / 123 45 67</p>
-            <p className="text-white/80">info@cafe-sonnenschein.de</p>
+            <p className="text-white/80">info@duuo-cafe.de</p>
           </div>
 
           <div className="text-center">
-            <h4 className="mb-3 text-lg font-semibold text-cafe-peach">Öffnungszeiten</h4>
             <p className="text-white/80">Mo - Fr: 08:00 - 19:00 Uhr</p>
             <p className="text-white/80">Sa: 09:00 - 20:00 Uhr</p>
             <p className="text-white/80">So: 10:00 - 18:00 Uhr</p>
@@ -39,7 +36,7 @@ const Footer = () => {
         </div>
 
         <div className="mt-8 border-t border-white/10 pt-8 text-center text-sm text-white/60">
-          <p>&copy; {new Date().getFullYear()} Café Sonnenschein. Alle Rechte vorbehalten.</p>
+          <p>&copy; {new Date().getFullYear()} DUUO. Alle Rechte vorbehalten.</p>
         </div>
       </div>
     </footer>
