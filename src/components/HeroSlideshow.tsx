@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect } from 'react';
 import { cn } from '@/lib/utils';
 const slides = [{
@@ -19,24 +20,46 @@ const slides = [{
 }];
 const HeroSlideshow = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
+  const [fadeState, setFadeState] = useState("fade-in");
+  
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentSlide(prev => prev === slides.length - 1 ? 0 : prev + 1);
-    }, 5000);
+      // Start fade out animation
+      setFadeState("fade-out");
+      
+      // Wait for fade out to complete before changing slide
+      setTimeout(() => {
+        setCurrentSlide(prev => prev === slides.length - 1 ? 0 : prev + 1);
+        // Start fade in animation
+        setFadeState("fade-in");
+      }, 500); // 500ms for the fade out animation
+      
+    }, 6500); // 6.5 seconds per slide
+    
     return () => clearInterval(interval);
   }, []);
+  
   return <div className="slideshow-container">
-      {slides.map((slide, index) => <div key={slide.id} className={cn('slideshow-slide', index === currentSlide && 'active')}>
+      {slides.map((slide, index) => (
+        <div 
+          key={slide.id} 
+          className={cn(
+            'slideshow-slide', 
+            index === currentSlide && 'active',
+            index === currentSlide && `animate-${fadeState}`
+          )}
+        >
           <div className={cn('slideshow-image-container h-full w-full', index === currentSlide && 'animate-ken-burns')}>
             <img src={slide.image} alt={slide.alt} className="slideshow-image" />
           </div>
-        </div>)}
+        </div>
+      ))}
       <div className="slideshow-overlay">
-        <div className="rounded-full bg-cafe-main/90 p-6 mb-4 shadow-lg">
-          <img alt="DUUO Logo" className="h-24 w-auto" src="/lovable-uploads/82cb6b56-0dc3-43ce-9fc5-6fb5de962ab0.png" />
+        <div className="mb-4">
+          <img alt="DUUO Logo" className="h-32 w-auto" src="/lovable-uploads/82cb6b56-0dc3-43ce-9fc5-6fb5de962ab0.png" />
         </div>
         <h1 className="text-4xl md:text-6xl font-bold mb-4 text-center">CAFÉ | TAGESBAR | EVENTLOCATION</h1>
-        <p className="text-xl md:text-2xl max-w-2xl text-center">Gemütliche Atmosphäre, ausgezeichneter Kaffee  
+        <p className="text-xl md:text-2xl max-w-2xl text-center">Gemütliche Atmosphäre, ausgezeichneter Kaffee  
 & hausgemachte Köstlichkeiten</p>
       </div>
     </div>;
