@@ -1,4 +1,3 @@
-
 import React, { useEffect, useRef } from 'react';
 
 const MapLocation = () => {
@@ -111,7 +110,9 @@ const MapLocation = () => {
     };
     
     return () => {
-      window.document.body.removeChild(googleMapScript);
+      if (googleMapScript.parentNode) {
+        window.document.body.removeChild(googleMapScript);
+      }
       delete window.initMap;
     };
   }, []);
@@ -127,7 +128,6 @@ const MapLocation = () => {
 declare global {
   interface Window {
     initMap: () => void;
-    google: any;
   }
 }
 
