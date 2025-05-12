@@ -1,23 +1,11 @@
-
 import React, { useState } from 'react';
 import { MapPin } from 'lucide-react';
-
 const Location = () => {
   const [isHovered, setIsHovered] = useState(false);
-  
-  return (
-    <section id="standort" className="relative">
-      <div 
-        className="relative h-[600px] w-full"
-        onMouseEnter={() => setIsHovered(true)}
-        onMouseLeave={() => setIsHovered(false)}
-      >
+  return <section id="standort" className="relative">
+      <div className="relative h-[600px] w-full" onMouseEnter={() => setIsHovered(true)} onMouseLeave={() => setIsHovered(false)}>
         <div className={`absolute inset-0 transition-transform duration-700 ${isHovered ? 'scale-105' : 'scale-100'}`}>
-          <img
-            src="https://images.unsplash.com/photo-1576753092241-37d18f12f898?q=80&w=1927&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-            alt="München Westend"
-            className="h-full w-full object-cover"
-          />
+          <img src="https://images.unsplash.com/photo-1576753092241-37d18f12f898?q=80&w=1927&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="München Westend" className="h-full w-full object-cover" />
         </div>
         <div className="absolute inset-0 bg-black/60"></div>
         
@@ -32,27 +20,22 @@ const Location = () => {
               </div>
               
               <div className="mb-8 rounded-lg bg-white/10 p-6 backdrop-blur-sm">
-                <p className="mb-2 text-xl font-bold">Café Sonnenschein</p>
-                <p className="mb-1">Westendstraße 123</p>
+                <p className="mb-2 text-xl font-bold">Café DUUO</p>
+                <p className="mb-1">Gollierstraße 53</p>
                 <p className="mb-4">80339 München</p>
                 
                 <p className="mb-1"><strong>Telefon:</strong> 089 / 123 45 67</p>
-                <p><strong>E-Mail:</strong> info@cafe-sonnenschein.de</p>
+                <p className=""><strong>E-Mail:</strong> info@cafe-sonnenschein.de</p>
               </div>
               
               <div className="mb-4">
                 <p className="mb-2 text-lg font-bold">Öffnungszeiten:</p>
-                <p className="mb-1">Montag - Freitag: 08:00 - 19:00 Uhr</p>
-                <p className="mb-1">Samstag: 09:00 - 20:00 Uhr</p>
-                <p>Sonntag: 10:00 - 18:00 Uhr</p>
+                <p className="mb-1">Mittwoch - Freitag: 09:00 - 17:00 Uhr</p>
+                <p className="mb-1">Samstag: 10:00 - 16:00 Uhr</p>
+                <p>Sonntag: 10:00 - 16:00 Uhr</p>
               </div>
               
-              <a
-                href="https://maps.google.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="mt-6 inline-flex items-center rounded-full bg-cafe-main px-6 py-3 text-white transition-all duration-300 hover:bg-cafe-dark"
-              >
+              <a href="https://maps.google.com" target="_blank" rel="noopener noreferrer" className="mt-6 inline-flex items-center rounded-full bg-cafe-main px-6 py-3 text-white transition-all duration-300 hover:bg-cafe-dark">
                 <MapPin className="mr-2 h-5 w-5" />
                 Route planen
               </a>
@@ -60,8 +43,6 @@ const Location = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default Location;
