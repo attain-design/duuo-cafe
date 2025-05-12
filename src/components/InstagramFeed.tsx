@@ -22,7 +22,7 @@ const InstagramFeed = () => {
         <div className="mb-12 flex flex-col items-center justify-center">
           <Instagram className="mb-4 h-8 w-8 text-cafe-main" />
           <h2 className="mb-2 text-center text-4xl font-bold text-cafe-dark">Folgen Sie uns auf Instagram</h2>
-          <p className="text-center text-lg text-cafe-dark/80">duuo.munich</p>
+          <p className="text-center text-lg text-cafe-dark/80">@duuo.munich</p>
         </div>
 
         <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
