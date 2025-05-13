@@ -101,7 +101,7 @@
   }
   
   .slideshow-slide {
-    @apply absolute inset-0 transition-opacity duration-500 ease-in-out;
+    @apply absolute inset-0 opacity-0 transition-opacity duration-1000 ease-in-out;
   }
   
   .slideshow-slide.active {
@@ -114,6 +114,47 @@
   
   .slideshow-overlay {
     @apply absolute inset-0 flex flex-col items-center justify-center bg-black/40 p-4 text-white;
+  }
+
+  /* Ken Burns animation */
+  .animate-ken-burns {
+    animation: ken-burns 10s ease forwards;
+  }
+
+  @keyframes ken-burns {
+    0% {
+      transform: scale(1);
+    }
+    100% {
+      transform: scale(1.1);
+    }
+  }
+
+  /* Fade animations for slideshow */
+  .animate-fade-in {
+    animation: slideshow-fade-in 1s ease forwards;
+  }
+
+  .animate-fade-out {
+    animation: slideshow-fade-out 1s ease forwards;
+  }
+
+  @keyframes slideshow-fade-in {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  @keyframes slideshow-fade-out {
+    0% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
   }
 
   /* Scroll animations */

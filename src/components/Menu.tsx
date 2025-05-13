@@ -1,7 +1,8 @@
 
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import { Coffee, Cake, Utensils } from 'lucide-react';
 import { cn } from '@/lib/utils';
+import { initScrollAnimations } from '@/utils/scrollAnimation';
 
 const menuCategories = [
   {
@@ -82,24 +83,33 @@ const menuCategories = [
 ];
 
 const Menu = () => {
+  useEffect(() => {
+    const cleanup = initScrollAnimations();
+    return cleanup;
+  }, []);
+
   return (
     <section id="menu" className="bg-cafe-light py-20">
       <div className="container mx-auto px-4">
-        <h2 className="mb-2 text-center text-4xl font-bold text-cafe-dark">Unsere Speisekarte</h2>
-        <p className="mb-12 text-center text-lg text-cafe-dark/80">
+        <h2 className="mb-2 text-center text-4xl font-bold text-cafe-dark fade-in-up">Unsere Speisekarte</h2>
+        <p className="mb-12 text-center text-lg text-cafe-dark/80 fade-in-up" style={{ transitionDelay: '0.1s' }}>
           Entdecken Sie unsere Auswahl an Kaffeespezialitäten und hausgemachten Leckereien
         </p>
 
-        {menuCategories.map((category) => (
+        {menuCategories.map((category, categoryIndex) => (
           <div key={category.id} className="mb-16">
-            <div className="mb-8 flex items-center justify-center">
+            <div className="mb-8 flex items-center justify-center fade-in-up" style={{ transitionDelay: `${0.2 + categoryIndex * 0.1}s` }}>
               <div className="mr-3 text-cafe-main">{category.icon}</div>
               <h3 className="text-2xl font-bold text-cafe-dark">{category.title}</h3>
             </div>
 
             <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
-              {category.items.map((item) => (
-                <div key={item.id} className="menu-item group">
+              {category.items.map((item, itemIndex) => (
+                <div 
+                  key={item.id} 
+                  className="menu-item group fade-in-up" 
+                  style={{ transitionDelay: `${0.3 + categoryIndex * 0.1 + itemIndex * 0.1}s` }}
+                >
                   <div className="relative h-64 overflow-hidden rounded-t-lg">
                     <img
                       src={item.image}
