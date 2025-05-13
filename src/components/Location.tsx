@@ -13,6 +13,10 @@ const Location = () => {
   }, []);
   
   return <section id="standort" className="relative">
+      <div className="container mx-auto px-4 pt-16 pb-8">
+        <h2 className="text-4xl font-bold text-center text-cafe-dark font-playfair fade-in-up mb-10">Hier finden Sie uns</h2>
+      </div>
+      
       <div className="relative h-[600px] w-full parallax-bg" style={{
       backgroundImage: `url('https://images.unsplash.com/photo-1576753092241-37d18f12f898?q=80&w=1927&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')`
     }} onMouseEnter={() => setIsHovered(true)} onMouseLeave={() => setIsHovered(false)}>
@@ -22,18 +26,16 @@ const Location = () => {
         
         <div className="absolute inset-0 flex flex-col items-center justify-center text-white">
           <div className="container mx-auto px-4">
-            <div className="mx-auto max-w-2xl text-center flex flex-col h-full justify-between py-12">
-              <h2 className="text-4xl font-bold fade-in-up">Hier finden Sie uns</h2>
-              
-              <div className="fade-in-up my-auto" style={{
-              transitionDelay: '0.2s'
-            }}>
-                <p className="text-4xl font-light">München - Westend</p>
+            <div className="mx-auto max-w-2xl text-center flex flex-col h-full justify-center py-12">
+              <div className="fade-in-up my-auto">
+                <p className="text-5xl font-playfair font-light">München - Westend</p>
               </div>
               
-              <div className="fade-in-up" style={{
-              transitionDelay: '0.4s'
-            }}>
+              <div className="fade-in-up mt-32" style={{transitionDelay: '0.4s'}}>
+                <div className="flex items-center justify-center">
+                  <MapPin className="h-4 w-4 text-cafe-peach/70 mr-2" />
+                  <p className="text-white/80 text-sm">Gollierstraße 53, 80339 München</p>
+                </div>
               </div>
             </div>
           </div>
@@ -50,13 +52,6 @@ const Location = () => {
               <MapPin className="mr-2 h-5 w-5" />
               Route planen
             </a>
-          </div>
-          
-          <div className="mt-8 text-center fade-in-up" style={{ transitionDelay: '0.8s' }}>
-            <div className="flex items-center justify-center mb-2">
-              <MapPin className="mr-2 h-4 w-4 text-cafe-peach/70" />
-              <p className="text-gray-700">Gollierstraße 53, 80339 München</p>
-            </div>
           </div>
         </div>
       </div>
