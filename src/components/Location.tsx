@@ -13,8 +13,8 @@ const Location = () => {
   }, []);
   
   return <section id="standort" className="relative">
-      <div className="container mx-auto px-4 pt-16 pb-8">
-        <h2 className="text-4xl font-bold text-center text-cafe-dark font-playfair fade-in-up border-b-2 border-cafe-main inline-block mx-auto pb-2">Hier finden Sie uns</h2>
+      <div className="container mx-auto px-4 pt-16 pb-8 text-center">
+        <h2 className="text-4xl font-bold text-cafe-dark font-playfair fade-in-up border-b-2 border-cafe-main inline-block mx-auto pb-2">Hier finden Sie uns</h2>
       </div>
       
       <div className="relative h-[600px] w-full parallax-bg" style={{
