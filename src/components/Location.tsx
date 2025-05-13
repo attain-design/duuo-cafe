@@ -1,17 +1,20 @@
+
 import React, { useState, useEffect } from 'react';
 import { MapPin } from 'lucide-react';
 import MapLocation from './MapLocation';
 import { initScrollAnimations } from '@/utils/scrollAnimation';
+
 const Location = () => {
   const [isHovered, setIsHovered] = useState(false);
+  
   useEffect(() => {
     const cleanup = initScrollAnimations();
     return cleanup;
   }, []);
+  
   return <section id="standort" className="relative">
       <div className="container mx-auto px-4 pt-16 pb-8">
-        <h2 className="text-4xl font-bold text-center text-cafe-dark font-playfair fade-in-up mb-10">Hier finden Sie uns
-      </h2>
+        <h2 className="text-4xl font-bold text-center text-cafe-dark font-playfair fade-in-up border-b-2 border-cafe-main inline-block mx-auto pb-2">Hier finden Sie uns</h2>
       </div>
       
       <div className="relative h-[600px] w-full parallax-bg" style={{
@@ -26,14 +29,14 @@ const Location = () => {
             <div className="mx-auto max-w-2xl text-center flex flex-col h-full justify-center py-12">
               <div className="fade-in-up my-auto">
                 <p className="text-5xl font-playfair font-light">München - Westend</p>
-              </div>
-              
-              <div className="fade-in-up mt-32" style={{
-              transitionDelay: '0.4s'
-            }}>
-                <div className="flex items-center justify-center">
-                  <MapPin className="h-4 w-4 text-cafe-peach/70 mr-2" />
-                  <p className="text-white/80 text-sm">Gollierstraße 53, 80339 München</p>
+                
+                <div className="mt-6 fade-in-up" style={{
+                transitionDelay: '0.4s'
+              }}>
+                  <div className="flex items-center justify-center">
+                    <MapPin className="h-4 w-4 text-cafe-peach/70 mr-2" />
+                    <p className="text-white/80 text-sm">Gollierstraße 53, 80339 München</p>
+                  </div>
                 </div>
               </div>
             </div>
@@ -56,4 +59,5 @@ const Location = () => {
       </div>
     </section>;
 };
+
 export default Location;

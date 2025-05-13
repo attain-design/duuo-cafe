@@ -1,13 +1,12 @@
 
 import React from 'react';
-import { Coffee, Phone, Mail, Clock } from 'lucide-react';
+import { Phone, Mail, Clock } from 'lucide-react';
 
 const Footer = () => {
   return <footer id="kontakt" className="bg-cafe-dark text-white">
       <div className="container mx-auto px-4 py-12">
         <div className="mb-8 flex flex-col items-center justify-center">
-          <Coffee className="mb-4 h-8 w-8 text-cafe-peach" />
-          <h3 className="mb-2 text-2xl font-bold">DUUO</h3>
+          <img alt="DUUO" src="/lovable-uploads/b5b1d10b-c6c0-493a-8baf-500d27f5b2ca.png" className="h-36 w-auto" />
         </div>
 
         <div className="mb-8 flex flex-wrap justify-center gap-x-8 gap-y-4">
