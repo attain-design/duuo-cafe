@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 import { cn } from '@/lib/utils';
@@ -18,7 +17,7 @@ const Navbar = () => {
           <a href="/" className="text-2xl font-bold font-serif" style={{
           color: "#bab3a1"
         }}>
-            <img alt="DUUO" className="h-16 w-auto" src="/lovable-uploads/b5b1d10b-c6c0-493a-8baf-500d27f5b2ca.png" />
+            <img alt="DUUO" src="/lovable-uploads/b5b1d10b-c6c0-493a-8baf-500d27f5b2ca.png" className="h-16 w-auto" />
           </a>
 
           {/* Desktop Navigation */}
