@@ -21,21 +21,21 @@ const Navbar = () => {
           <a href="/" className="text-2xl font-bold font-serif" style={{
           color: "#bab3a1"
         }}>
-            <img alt="DUUO" src="/lovable-uploads/b5b1d10b-c6c0-493a-8baf-500d27f5b2ca.png" className="h-24 w-auto" />
+            <img alt="DUUO" src="/lovable-uploads/b5b1d10b-c6c0-493a-8baf-500d27f5b2ca.png" className="h-36 w-auto" />
           </a>
 
           {/* Desktop Navigation */}
           <nav className="hidden space-x-8 md:flex">
-            <a href="#menu" className="nav-link" style={{
+            <a href="#menu" className="nav-link font-playfair" style={{
             color: "#bab3a1"
           }}>Speisekarte</a>
-            <a href="#galerie" className="nav-link" style={{
+            <a href="#galerie" className="nav-link font-playfair" style={{
             color: "#bab3a1"
           }}>Galerie</a>
-            <a href="#standort" className="nav-link" style={{
+            <a href="#standort" className="nav-link font-playfair" style={{
             color: "#bab3a1"
           }}>Standort</a>
-            <a href="#kontakt" className="nav-link" style={{
+            <a href="#kontakt" className="nav-link font-playfair" style={{
             color: "#bab3a1"
           }}>Kontakt</a>
           </nav>
@@ -54,22 +54,22 @@ const Navbar = () => {
       {/* Mobile Navigation */}
       {isMobileMenuOpen && <div className="absolute left-0 right-0 top-20 bg-white/95 shadow-md backdrop-blur-sm md:hidden">
           <nav className="flex flex-col space-y-4 p-6">
-            <a href="#menu" className="text-lg font-medium" style={{
+            <a href="#menu" className="text-lg font-medium font-playfair" style={{
           color: "#bab3a1"
         }} onClick={() => setIsMobileMenuOpen(false)}>
               Speisekarte
             </a>
-            <a href="#galerie" className="text-lg font-medium" style={{
+            <a href="#galerie" className="text-lg font-medium font-playfair" style={{
           color: "#bab3a1"
         }} onClick={() => setIsMobileMenuOpen(false)}>
               Galerie
             </a>
-            <a href="#standort" className="text-lg font-medium" style={{
+            <a href="#standort" className="text-lg font-medium font-playfair" style={{
           color: "#bab3a1"
         }} onClick={() => setIsMobileMenuOpen(false)}>
               Standort
             </a>
-            <a href="#kontakt" className="text-lg font-medium" style={{
+            <a href="#kontakt" className="text-lg font-medium font-playfair" style={{
           color: "#bab3a1"
         }} onClick={() => setIsMobileMenuOpen(false)}>
               Kontakt

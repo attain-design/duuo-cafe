@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Coffee, MapPin, Phone, Mail, Clock } from 'lucide-react';
+import { Coffee, Phone, Mail, Clock } from 'lucide-react';
 
 const Footer = () => {
   return <footer id="kontakt" className="bg-cafe-dark text-white">
@@ -11,15 +11,6 @@ const Footer = () => {
         </div>
 
         <div className="mb-8 flex flex-wrap justify-center gap-x-8 gap-y-4">
-          <div className="text-center">
-            <h4 className="mb-3 font-bold text-cafe-peach">Adresse</h4>
-            <div className="flex items-center justify-center mb-2">
-              <MapPin className="mr-1 h-4 w-4 text-cafe-peach/70" />
-              <p className="text-white/80">Gollierstraße 53</p>
-            </div>
-            <p className="text-white/80">80339 München</p>
-          </div>
-
           <div className="text-center">
             <h4 className="mb-3 font-bold text-cafe-peach">Kontakt</h4>
             <div className="flex items-center justify-center mb-2">

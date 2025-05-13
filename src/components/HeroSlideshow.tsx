@@ -36,7 +36,7 @@ const HeroSlideshow = () => {
         setFadeState("fade-in");
       }, 500); // 500ms for the fade out animation
       
-    }, 6000); // Changed to 6 seconds per slide
+    }, 6000); // 6 seconds per slide
     
     return () => clearInterval(interval);
   }, []);
@@ -58,7 +58,7 @@ const HeroSlideshow = () => {
       ))}
       <div className="slideshow-overlay">
         <div className="mb-4">
-          <img alt="DUUO Logo" className="h-40 w-auto" src="/lovable-uploads/82cb6b56-0dc3-43ce-9fc5-6fb5de962ab0.png" />
+          <img alt="DUUO Logo" className="h-60 w-auto" src="/lovable-uploads/82cb6b56-0dc3-43ce-9fc5-6fb5de962ab0.png" />
         </div>
         <h1 className="text-4xl md:text-6xl font-bold mb-4 text-center">CAFÉ | TAGESBAR | EVENTLOCATION</h1>
         <p className="text-xl md:text-2xl max-w-2xl text-center">Gemütliche Atmosphäre, ausgezeichneter Kaffee  
